@@ -1,0 +1,88 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ff8fab;
+    font-family: cursive;
+    text-shadow: #fb3d7f 2px 2px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1cm;
+    color: #fdfdfd;
+    margin: 15px 0;
+}
+
+.btn-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+button {
+    position: absolute;  
+    top: calc(100% - 5rem);
+    min-width: 120px;
+    height: inherit;
+    color: #fb3d7f;
+    font-size: 0.6cm; /* Corregido el valor de font-size duplicado */
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px;
+    border: 2px solid;
+    transition: 0.3s;
+}
+
+.yes-btn {
+    left: 50%;
+    transform: translateX(calc(-100% - 1rem));
+    z-index: 1;
+}
+
+.no-btn {
+    left: calc(50% + 1rem);
+    transition: all 0.2s ease;
+    z-index: 2;
+}
+
+button:nth-child(2) {
+    background-color: white;
+    color: #e94d58;
+}
+
+@keyframes revealEnvelope {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.envelope {
+    display: none;
+    position: absolute;
+    top: 55%;
+    left: 63%;
+    transform: translate(-25%, -25%); 
+    width: 200px;
+    height: 100px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    animation: revealEnvelope 1s forwards;
+}
+
+.envelope p {
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    color: #000f0f; /* Corregido el color */
+}
